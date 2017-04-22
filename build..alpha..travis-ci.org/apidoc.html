@@ -1,0 +1,676 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/spicyj/es3ify"
+
+    >es3ify (v0.2.2)</a>
+</h1>
+<h4>Browserify transform to convert ES5 syntax to be ES3-compatible.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.es3ify">module es3ify</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es3ify.es3ify">
+            function <span class="apidocSignatureSpan"></span>es3ify
+            <span class="apidocSignatureSpan">(file)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es3ify.isReserved">
+            function <span class="apidocSignatureSpan">es3ify.</span>isReserved
+            <span class="apidocSignatureSpan">(word)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es3ify.transform">
+            function <span class="apidocSignatureSpan">es3ify.</span>transform
+            <span class="apidocSignatureSpan">(code)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es3ify.visitorList.0">
+            function <span class="apidocSignatureSpan">es3ify.</span>visitorList.0
+            <span class="apidocSignatureSpan">(traverse, node, path, state)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es3ify.visitorList.1">
+            function <span class="apidocSignatureSpan">es3ify.</span>visitorList.1
+            <span class="apidocSignatureSpan">(traverse, node, path, state)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es3ify.visitorList.2">
+            function <span class="apidocSignatureSpan">es3ify.</span>visitorList.2
+            <span class="apidocSignatureSpan">(traverse, node, path, state)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">es3ify.</span>visitorList</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.es3ify.visitorList">module es3ify.visitorList</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es3ify.visitorList.0">
+            function <span class="apidocSignatureSpan">es3ify.visitorList.</span>0
+            <span class="apidocSignatureSpan">(traverse, node, path, state)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es3ify.visitorList.1">
+            function <span class="apidocSignatureSpan">es3ify.visitorList.</span>1
+            <span class="apidocSignatureSpan">(traverse, node, path, state)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es3ify.visitorList.2">
+            function <span class="apidocSignatureSpan">es3ify.visitorList.</span>2
+            <span class="apidocSignatureSpan">(traverse, node, path, state)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.es3ify.visitorList.0">module es3ify.visitorList.0</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es3ify.visitorList.0.test">
+            function <span class="apidocSignatureSpan">es3ify.visitorList.0.</span>test
+            <span class="apidocSignatureSpan">(node, path, state)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es3ify.visitorList.0.0">
+            function <span class="apidocSignatureSpan">es3ify.visitorList.</span>0
+            <span class="apidocSignatureSpan">(traverse, node, path, state)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.es3ify.visitorList.1">module es3ify.visitorList.1</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es3ify.visitorList.1.test">
+            function <span class="apidocSignatureSpan">es3ify.visitorList.1.</span>test
+            <span class="apidocSignatureSpan">(node, path, state)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es3ify.visitorList.1.1">
+            function <span class="apidocSignatureSpan">es3ify.visitorList.</span>1
+            <span class="apidocSignatureSpan">(traverse, node, path, state)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.es3ify.visitorList.2">module es3ify.visitorList.2</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es3ify.visitorList.2.test">
+            function <span class="apidocSignatureSpan">es3ify.visitorList.2.</span>test
+            <span class="apidocSignatureSpan">(node, path, state)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es3ify.visitorList.2.2">
+            function <span class="apidocSignatureSpan">es3ify.visitorList.</span>2
+            <span class="apidocSignatureSpan">(traverse, node, path, state)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.es3ify" id="apidoc.module.es3ify">module es3ify</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.es3ify.es3ify" id="apidoc.element.es3ify.es3ify">
+        function <span class="apidocSignatureSpan"></span>es3ify
+        <span class="apidocSignatureSpan">(file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function process(file) {
+    if (/\.json$/.test(file)) return through();
+    var data = &#x27;&#x27;;
+    function write(chunk) {
+        data += chunk;
+    }
+
+    function compile() {
+
+        var source;
+
+        try {
+          source = transform(data);
+        } catch (e) {
+          return this.emit(&#x27;error&#x27;, e);
+        }
+
+        this.queue(source);
+        this.queue(null);
+    }
+
+    return through(write, compile);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.es3ify.isReserved" id="apidoc.element.es3ify.isReserved">
+        function <span class="apidocSignatureSpan">es3ify.</span>isReserved
+        <span class="apidocSignatureSpan">(word)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isReserved = function (word) {
+    return reservedDict.hasOwnProperty(word) ? !!reservedDict[word] : false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.es3ify.transform" id="apidoc.element.es3ify.transform">
+        function <span class="apidocSignatureSpan">es3ify.</span>transform
+        <span class="apidocSignatureSpan">(code)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function transform(code) {
+    return jstransform.transform(visitorList, code).code;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var visitorList = [
+visitMemberExpression,
+visitProperty,
+visitArrayOrObjectExpression
+];
+
+function transform(code) {
+return jstransform.<span class="apidocCodeKeywordSpan">transform</span>(visitorList, code).code;
+}
+
+function process(file) {
+if (/\.json$/.test(file)) return through();
+var data = &#x27;&#x27;;
+function write(chunk) {
+    data += chunk;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.es3ify.visitorList.0" id="apidoc.element.es3ify.visitorList.0">
+        function <span class="apidocSignatureSpan">es3ify.</span>visitorList.0
+        <span class="apidocSignatureSpan">(traverse, node, path, state)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function visitMemberExpression(traverse, node, path, state) {
+    traverse(node.object, path, state);
+    utils.catchup(node.object.range[1], state);
+    utils.append(&#x27;[&#x27;, state);
+    utils.catchupWhiteSpace(node.property.range[0], state);
+    utils.append(&#x27;&#x22;&#x27;, state);
+    utils.catchup(node.property.range[1], state);
+    utils.append(&#x27;&#x22;]&#x27;, state);
+    return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.es3ify.visitorList.1" id="apidoc.element.es3ify.visitorList.1">
+        function <span class="apidocSignatureSpan">es3ify.</span>visitorList.1
+        <span class="apidocSignatureSpan">(traverse, node, path, state)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function visitProperty(traverse, node, path, state) {
+    utils.catchup(node.key.range[0], state);
+    utils.append(&#x27;&#x22;&#x27;, state);
+    utils.catchup(node.key.range[1], state);
+    utils.append(&#x27;&#x22;&#x27;, state);
+    utils.catchup(node.value.range[0], state);
+    traverse(node.value, path, state);
+    return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.es3ify.visitorList.2" id="apidoc.element.es3ify.visitorList.2">
+        function <span class="apidocSignatureSpan">es3ify.</span>visitorList.2
+        <span class="apidocSignatureSpan">(traverse, node, path, state)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function visitArrayOrObjectExpression(traverse, node, path, state) {
+    // Copy the opening &#x27;[&#x27; or &#x27;{&#x27;
+    utils.catchup(node.range[0] + 1, state);
+
+    var elements = node.type === Syntax.ArrayExpression ?
+        node.elements :
+        node.properties;
+    elements.forEach(function(element, i) {
+        if (element == null &#x26;&#x26; i === elements.length - 1) {
+            throw new Error(
+                &#x22;Elisions ending an array are interpreted inconsistently &#x22; +
+                &#x22;in IE8; remove the extra comma or use &#x27;undefined&#x27; explicitly&#x22;);
+        }
+        if (element != null) {
+            // Copy commas from after previous element, if any
+            utils.catchup(element.range[0], state);
+            traverse(element, path, state);
+            utils.catchup(element.range[1], state);
+        }
+    });
+
+    // Skip over a trailing comma, if any
+    utils.catchup(node.range[1] - 1, state, stripComma);
+    utils.catchup(node.range[1], state);
+    return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.es3ify.visitorList" id="apidoc.module.es3ify.visitorList">module es3ify.visitorList</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.es3ify.visitorList.0" id="apidoc.element.es3ify.visitorList.0">
+        function <span class="apidocSignatureSpan">es3ify.visitorList.</span>0
+        <span class="apidocSignatureSpan">(traverse, node, path, state)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function visitMemberExpression(traverse, node, path, state) {
+    traverse(node.object, path, state);
+    utils.catchup(node.object.range[1], state);
+    utils.append(&#x27;[&#x27;, state);
+    utils.catchupWhiteSpace(node.property.range[0], state);
+    utils.append(&#x27;&#x22;&#x27;, state);
+    utils.catchup(node.property.range[1], state);
+    utils.append(&#x27;&#x22;]&#x27;, state);
+    return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.es3ify.visitorList.1" id="apidoc.element.es3ify.visitorList.1">
+        function <span class="apidocSignatureSpan">es3ify.visitorList.</span>1
+        <span class="apidocSignatureSpan">(traverse, node, path, state)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function visitProperty(traverse, node, path, state) {
+    utils.catchup(node.key.range[0], state);
+    utils.append(&#x27;&#x22;&#x27;, state);
+    utils.catchup(node.key.range[1], state);
+    utils.append(&#x27;&#x22;&#x27;, state);
+    utils.catchup(node.value.range[0], state);
+    traverse(node.value, path, state);
+    return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.es3ify.visitorList.2" id="apidoc.element.es3ify.visitorList.2">
+        function <span class="apidocSignatureSpan">es3ify.visitorList.</span>2
+        <span class="apidocSignatureSpan">(traverse, node, path, state)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function visitArrayOrObjectExpression(traverse, node, path, state) {
+    // Copy the opening &#x27;[&#x27; or &#x27;{&#x27;
+    utils.catchup(node.range[0] + 1, state);
+
+    var elements = node.type === Syntax.ArrayExpression ?
+        node.elements :
+        node.properties;
+    elements.forEach(function(element, i) {
+        if (element == null &#x26;&#x26; i === elements.length - 1) {
+            throw new Error(
+                &#x22;Elisions ending an array are interpreted inconsistently &#x22; +
+                &#x22;in IE8; remove the extra comma or use &#x27;undefined&#x27; explicitly&#x22;);
+        }
+        if (element != null) {
+            // Copy commas from after previous element, if any
+            utils.catchup(element.range[0], state);
+            traverse(element, path, state);
+            utils.catchup(element.range[1], state);
+        }
+    });
+
+    // Skip over a trailing comma, if any
+    utils.catchup(node.range[1] - 1, state, stripComma);
+    utils.catchup(node.range[1], state);
+    return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.es3ify.visitorList.0" id="apidoc.module.es3ify.visitorList.0">module es3ify.visitorList.0</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.es3ify.visitorList.0.test" id="apidoc.element.es3ify.visitorList.0.test">
+        function <span class="apidocSignatureSpan">es3ify.visitorList.0.</span>test
+        <span class="apidocSignatureSpan">(node, path, state)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">test = function (node, path, state) {
+    return node.type === Syntax.MemberExpression &#x26;&#x26;
+        node.property.type === Syntax.Identifier &#x26;&#x26;
+        reservedDict[node.property.name] === true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+];
+
+function transform(code) {
+return jstransform.transform(visitorList, code).code;
+}
+
+function process(file) {
+if (/\.json$/.<span class="apidocCodeKeywordSpan">test</span>(file)) return through();
+var data = &#x27;&#x27;;
+function write(chunk) {
+    data += chunk;
+}
+
+function compile() {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.es3ify.visitorList.0.0" id="apidoc.element.es3ify.visitorList.0.0">
+        function <span class="apidocSignatureSpan">es3ify.visitorList.</span>0
+        <span class="apidocSignatureSpan">(traverse, node, path, state)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function visitMemberExpression(traverse, node, path, state) {
+    traverse(node.object, path, state);
+    utils.catchup(node.object.range[1], state);
+    utils.append(&#x27;[&#x27;, state);
+    utils.catchupWhiteSpace(node.property.range[0], state);
+    utils.append(&#x27;&#x22;&#x27;, state);
+    utils.catchup(node.property.range[1], state);
+    utils.append(&#x27;&#x22;]&#x27;, state);
+    return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.es3ify.visitorList.1" id="apidoc.module.es3ify.visitorList.1">module es3ify.visitorList.1</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.es3ify.visitorList.1.test" id="apidoc.element.es3ify.visitorList.1.test">
+        function <span class="apidocSignatureSpan">es3ify.visitorList.1.</span>test
+        <span class="apidocSignatureSpan">(node, path, state)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">test = function (node, path, state) {
+    return node.type === Syntax.Property &#x26;&#x26;
+        node.key.type === Syntax.Identifier &#x26;&#x26;
+        reservedDict[node.key.name] === true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+];
+
+function transform(code) {
+return jstransform.transform(visitorList, code).code;
+}
+
+function process(file) {
+if (/\.json$/.<span class="apidocCodeKeywordSpan">test</span>(file)) return through();
+var data = &#x27;&#x27;;
+function write(chunk) {
+    data += chunk;
+}
+
+function compile() {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.es3ify.visitorList.1.1" id="apidoc.element.es3ify.visitorList.1.1">
+        function <span class="apidocSignatureSpan">es3ify.visitorList.</span>1
+        <span class="apidocSignatureSpan">(traverse, node, path, state)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function visitProperty(traverse, node, path, state) {
+    utils.catchup(node.key.range[0], state);
+    utils.append(&#x27;&#x22;&#x27;, state);
+    utils.catchup(node.key.range[1], state);
+    utils.append(&#x27;&#x22;&#x27;, state);
+    utils.catchup(node.value.range[0], state);
+    traverse(node.value, path, state);
+    return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.es3ify.visitorList.2" id="apidoc.module.es3ify.visitorList.2">module es3ify.visitorList.2</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.es3ify.visitorList.2.test" id="apidoc.element.es3ify.visitorList.2.test">
+        function <span class="apidocSignatureSpan">es3ify.visitorList.2.</span>test
+        <span class="apidocSignatureSpan">(node, path, state)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">test = function (node, path, state) {
+    return node.type === Syntax.ArrayExpression ||
+        node.type === Syntax.ObjectExpression;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+];
+
+function transform(code) {
+return jstransform.transform(visitorList, code).code;
+}
+
+function process(file) {
+if (/\.json$/.<span class="apidocCodeKeywordSpan">test</span>(file)) return through();
+var data = &#x27;&#x27;;
+function write(chunk) {
+    data += chunk;
+}
+
+function compile() {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.es3ify.visitorList.2.2" id="apidoc.element.es3ify.visitorList.2.2">
+        function <span class="apidocSignatureSpan">es3ify.visitorList.</span>2
+        <span class="apidocSignatureSpan">(traverse, node, path, state)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function visitArrayOrObjectExpression(traverse, node, path, state) {
+    // Copy the opening &#x27;[&#x27; or &#x27;{&#x27;
+    utils.catchup(node.range[0] + 1, state);
+
+    var elements = node.type === Syntax.ArrayExpression ?
+        node.elements :
+        node.properties;
+    elements.forEach(function(element, i) {
+        if (element == null &#x26;&#x26; i === elements.length - 1) {
+            throw new Error(
+                &#x22;Elisions ending an array are interpreted inconsistently &#x22; +
+                &#x22;in IE8; remove the extra comma or use &#x27;undefined&#x27; explicitly&#x22;);
+        }
+        if (element != null) {
+            // Copy commas from after previous element, if any
+            utils.catchup(element.range[0], state);
+            traverse(element, path, state);
+            utils.catchup(element.range[1], state);
+        }
+    });
+
+    // Skip over a trailing comma, if any
+    utils.catchup(node.range[1] - 1, state, stripComma);
+    utils.catchup(node.range[1], state);
+    return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
